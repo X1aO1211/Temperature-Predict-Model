@@ -1,3 +1,4 @@
+# fetching today's data to predict tomorrow's temperature
 import datetime
 import urllib.request
 import json
@@ -51,4 +52,4 @@ X_test = pd.DataFrame(
 # load the model
 model_loaded = joblib.load("./forest_model.joblib")
 y_pred = model_loaded.predict(X_test)
-print(f"tomorrow's temperture is {y_pred[0]:.2f}°C")
+print(f"tomorrow's temperature is {y_pred[0]:.2f}°C")
